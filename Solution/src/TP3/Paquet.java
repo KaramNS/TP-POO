@@ -49,7 +49,7 @@ public class Paquet{
     public String toString(){
         String res = "";
         for(int i=0 ; i<taille ; i++){
-           res += ("Valeur [" + i + "]" + " : " + this.paquet.get(i).toString() + "\n");
+           res += ("Carte [" + i + "]" + " : " + this.paquet.get(i).toString() + "\n");
         }
         return res;
     }

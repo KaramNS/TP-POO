@@ -1,6 +1,5 @@
 package TP3;
 
-
 public class Carte implements Comparable<Carte>{
     public final int valeur;
     public final Couleur couleur; //PIQUE(1), COEUR(2), CARREAU(3), TREFLE(4);
