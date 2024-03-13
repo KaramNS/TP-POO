@@ -11,7 +11,7 @@ public class Joueur {
         this.nom = nom;
         this.paquetMain = new Paquet();
     }
-    public void nouveauJeu(){
+    public final void nouveauJeu(){
         this.paquetMain = new Paquet();
     }
     public final Carte jouer() throws NumberFormatException, IOException{
@@ -26,7 +26,7 @@ public class Joueur {
 
         return this.paquetMain.retirer(indexCarteChoisi);
     }
-    public void recupererCarte(){
+    public void recupererCarte(Carte carte){
 
     }
     public boolean aPerdu(){
