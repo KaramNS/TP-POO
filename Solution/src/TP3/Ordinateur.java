@@ -9,6 +9,6 @@ public class Ordinateur extends Joueur {
     @Override
     public Carte choisirCarte(){
         Random random = new Random();
-        return paquetMain.get(random.nextInt(paquetMain.taille()));
+        return paquetMain.get(random.nextInt(paquetMain.taille()-1));
     }
 }

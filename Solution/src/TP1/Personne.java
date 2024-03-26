@@ -3,7 +3,9 @@ import java.util.ArrayList;
 
 // Question tout
 public class Personne{
+    @SuppressWarnings("unused")
     private String nom;
+    @SuppressWarnings("unused")
     private String prenom;
     private Date DN; // DN : Date de Naissance
     private String sex; // M pour masculine, F pour Feminin

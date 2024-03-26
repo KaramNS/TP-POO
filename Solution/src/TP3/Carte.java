@@ -28,7 +28,8 @@ public class Carte implements Comparable<Carte>{
     }
     @Override
     public String toString(){
-        return "Valeur = " + this.valeur + ", Couleur " + this.couleur;
+        // return "Valeur = " + this.valeur + ", Couleur " + this.couleur;
+        return "" + this.valeur + " " + this.couleur;
     }
     
 }

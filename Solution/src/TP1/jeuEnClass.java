@@ -27,6 +27,7 @@ public class jeuEnClass {
     }
 
     // Run / Try 
+    @SuppressWarnings("resource")
     void run(){
         Scanner scanner = new Scanner(System.in);
         boolean flag = false;

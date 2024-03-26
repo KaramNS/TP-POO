@@ -5,17 +5,10 @@ import java.util.Collections;
 
 public class Paquet{
     private int taille;
-    private boolean estVide;
     private ArrayList<Carte> paquet = new ArrayList<>(52);
 
     public Paquet(){
         this.taille = 00;
-        this.estVide = true;
-        // for(int i=1 ; i<5; i++){
-        //     for(int j=0 ; j<13; j++){
-        //         ajouter(new Carte(j, i));
-        //     }
-        // }
     }
     public int taille(){
         return this.taille;
@@ -26,21 +19,24 @@ public class Paquet{
         }
         else{
             taille ++;
-            estVide = false;
             paquet.add(carte);
         }
     }
     public Carte retirer(int index){
-        return paquet.remove(index);
+        //if(this.taille > index){
+            return this.paquet.remove(index);
+        //}
+        // else{System.err.println("Err index non accèssible (Out of Range)");}
+        // return null;
     }
-    public Carte retirer(){
-        return paquet.remove(0);
-    }
+    // public Carte retirer(Carte carte){
+    //     return paquet.remove(paquet.get(carte));
+    // }
     public Carte get(int index){
         return paquet.get(index);
     }
     public boolean estVide(){
-        return estVide;
+        return (this.taille != 0);
     }
     public void melanger(){
         Collections.shuffle(paquet);

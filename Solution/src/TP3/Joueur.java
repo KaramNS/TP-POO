@@ -1,12 +1,13 @@
 package TP3;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 
-public class Joueur {
+import java.io.IOException;
+
+public abstract class Joueur {
     String nom;
     protected Paquet paquetMain;
-    
+
+    public abstract Carte choisirCarte() throws NumberFormatException, IOException;
+
     public Joueur(String nom){
         this.nom = nom;
         this.paquetMain = new Paquet();
@@ -17,17 +18,8 @@ public class Joueur {
     public final Carte jouer() throws NumberFormatException, IOException{
         return this.choisirCarte();
     }
-    public Carte choisirCarte() throws NumberFormatException, IOException{
-        System.out.println("Veillez choisir un carte à jouer : ");
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); 
-        int indexCarteChoisi;
-        
-        indexCarteChoisi = Integer.parseInt(br.readLine());
-
-        return this.paquetMain.retirer(indexCarteChoisi);
-    }
     public void recupererCarte(Carte carte){
-
+        this.paquetMain.ajouter(carte);
     }
     public boolean aPerdu(){
         if(this.paquetMain.estVide()){return true;}
@@ -36,6 +28,7 @@ public class Joueur {
     
     @Override
     public String toString(){
-        return "";
+        return this.nom + "\n" + this.paquetMain.toString() + "\n";
     }
 }
+

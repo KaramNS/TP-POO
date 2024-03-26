@@ -9,6 +9,7 @@ public class jeuEx2 {
     A guessing game; type start to start the game 
      */
     public static void main(String []args){
+        @SuppressWarnings("resource")
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
 

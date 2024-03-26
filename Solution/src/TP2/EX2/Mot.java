@@ -1,5 +1,4 @@
 package TP2.EX2;
-import java.util.ArrayList;
 
 public class Mot {
     private String mot;
